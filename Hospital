@@ -1,0 +1,50 @@
+package a;
+
+public class Hospital {
+	
+	final static int Ilosc_Pracownikow = 3;
+	
+	private Person[] pracownicy;
+	private int employeesNumber;
+	
+	public Hospital() {
+		setEmployeesNumber(0);
+		setPracownicy(new Person[Ilosc_Pracownikow]);
+	}
+	
+	public void add(Person pracownik) {
+		if (getEmployeesNumber() < Ilosc_Pracownikow) {
+			
+					getPracownicy()[getEmployeesNumber()] = pracownik;
+					setEmployeesNumber(getEmployeesNumber() + 1);
+			
+		}
+	}
+
+	public Person[] getPracownicy() {
+		return pracownicy;
+	}
+
+	public void setPracownicy(Person[] pracownicy) {
+		this.pracownicy = pracownicy;
+	}
+
+	public int getEmployeesNumber() {
+		return employeesNumber;
+	}
+
+	public void setEmployeesNumber(int employeesNumber) {
+		this.employeesNumber = employeesNumber;
+	}
+	
+	@Override
+	public String toString() {
+		String result = "";
+		for (int i = 0; i < employeesNumber; i++) {
+			result = result + pracownicy[i]+ "\n";
+		}
+		return result;
+	}
+	
+	
+}
