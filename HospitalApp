@@ -1,0 +1,17 @@
+package a;
+
+public class HospitalApp {
+	public static void main(String[] args) {
+		
+		Hospital hospital = new Hospital();
+		
+		hospital.add(new Doctor("Adam", "Bialek", 4000, 500));
+		hospital.add(new Nurse("Aga", "kalasznikow", 1450, 200));
+		hospital.add(new Nurse("Ewa", "Salic", 1500, 2));
+		
+		System.out.println("W szpitalu pracuja: ");
+		System.out.println(hospital);
+		
+	}
+	
+}
