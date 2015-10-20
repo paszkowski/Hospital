@@ -1,0 +1,29 @@
+package a;
+
+public class Nurse extends Person {
+	
+	private int overtime;
+	
+	Nurse() {}
+	
+	Nurse(String imie, String nazwisko, int pay, int overtime) {
+		super(imie, nazwisko, pay);
+		this.setOvertime(overtime);
+
+	}
+
+	public int getOvertime() {
+		return overtime;
+	}
+
+	public void setOvertime(int overtime) {
+		this.overtime = overtime;
+	}
+	
+	@Override
+	public String toString() {
+		
+		return super.toString() + "Nadgodziny: "+ " "  + overtime;
+	}
+
+}
